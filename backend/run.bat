@@ -1,0 +1,16 @@
+@echo off
+echo 启动 AI 行业情报系统后端服务...
+
+if not exist venv (
+    echo 创建虚拟环境...
+    python -m venv venv
+)
+
+echo 激活虚拟环境...
+call venv\Scripts\activate
+
+echo 安装/更新依赖...
+pip install -r requirements.txt
+
+echo 启动服务...
+uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload

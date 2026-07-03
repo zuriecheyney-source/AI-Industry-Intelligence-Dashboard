@@ -1,0 +1,57 @@
+{
+  "industries": [
+    {
+      "name": "AI板块",
+      "keywords": [
+        "人工智能",
+        "大模型",
+        "ChatGPT",
+        "GPT-4",
+        "Claude",
+        "AI芯片",
+        "机器学习",
+        "深度学习",
+        "自然语言处理"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "房地产政策",
+      "keywords": [
+        "房地产",
+        "楼市政策",
+        "房价",
+        "限购",
+        "房贷利率",
+        "保障房",
+        "土地拍卖",
+        "房产税"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "金融板块",
+      "keywords": [
+        "金融科技",
+        "银行",
+        "证券",
+        "监管政策",
+        "利率",
+        "理财",
+        "基金",
+        "股市",
+        "债券"
+      ],
+      "enabled": true
+    }
+  ],
+  "search_config": {
+    "max_results_per_keyword": 5,
+    "date_range_days": 1,
+    "language": "zh-CN"
+  },
+  "summary_config": {
+    "max_length": 150,
+    "extract_keywords": true
+  }
+}
