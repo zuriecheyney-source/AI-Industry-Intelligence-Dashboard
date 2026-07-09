@@ -30,10 +30,11 @@ export interface Statistics {
   by_month: Record<string, number>
 }
 
-const API_BASE = '/api'
+// 后端 API 地址：开发环境使用环境变量，生产环境可通过代理或环境变量配置
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
 
 async function fetchAPI<T>(endpoint: string, options?: RequestInit): Promise<T> {
-  const response = await fetch(`${API_BASE}${endpoint}`, {
+  const response = await fetch(`${API_BASE}/api${endpoint}`, {
     headers: {
       'Content-Type': 'application/json',
       ...options?.headers,
